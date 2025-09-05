@@ -1,3 +1,155 @@
-body {
-  margin: 0;
+@import './utils/variables';
+@import './stars';
+@import './header';
+
+@mixin small-text {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 50px 40px;
+  justify-content: center;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: $border-radius-standard;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  position: relative;
+  padding: 32px 16px 16px;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.2);
+    box-shadow: 0 8px 32px rgba(52, 86, 139, 0.12);
+  }
+
+  &__img-wrap {
+    width: 160px;
+    height: 134px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__title {
+    margin: 40px 0 0;
+    font-weight: $font-width-medium;
+    font-size: $font-size-s;
+    line-height: $line-hight-m;
+    color: $title-color;
+    width: 100%;
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover .card__title {
+    color: #34568b;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  &__rating-reviews {
+    @include small-text;
+
+    color: #060b35;
+    margin: 0;
+    font-weight: $font-width-regular;
+    font-size: $font-size-xs;
+    line-height: $line-hight-s;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 16px 0;
+
+    &-item {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      letter-spacing: 0%;
+    }
+
+    &-cost {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $title-color;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    background-color: $button-color;
+    border-radius: $border-radius-standard;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    line-height: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      background 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+      border: 1px solid #00acdc;
+    }
+  }
 }
