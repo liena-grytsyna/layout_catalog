@@ -13,6 +13,7 @@
   grid-template-columns: 1fr;
   padding: 50px 40px;
   justify-content: center;
+  gap: 48px 46px;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 1fr);
@@ -67,13 +68,28 @@
   }
 
   &__title {
-    margin: 40px 0 0;
-    font-weight: $font-width-medium;
-    font-size: $font-size-s;
-    line-height: $line-hight-m;
-    color: $title-color;
     width: 100%;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #060b35;
     transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 20px 0 0;
+    padding: 0;
+  }
+
+  &__code {
+    @include small-text;
+
+    color: $text-color;
+    margin-top: 8px;
+    margin-bottom: 0;
+    width: 100%;
+    letter-spacing: 0.2px;
+    font-family: Roboto, sans-serif;
+    text-align: left;
   }
 
   &:hover .card__title {
