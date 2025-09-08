@@ -18,7 +18,10 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header
+      class="header"
+      data-qa="header"
+    >
       <a href="#home">
         <img
           src="./images/logo.png"
@@ -26,12 +29,16 @@
           class="header__logo"
         />
       </a>
-      <nav class="header__nav nav">
+      <nav
+        class="header__nav nav"
+        data-qa="nav"
+      >
         <ul class="nav__list">
           <li class="nav__item">
             <a
               href="#"
               class="nav__link is-active"
+              data-qa="nav-active"
             >
               APPLE
             </a>
@@ -40,6 +47,7 @@
             <a
               href="#"
               class="nav__link"
+              data-qa="nav-hover"
             >
               SAMSUNG
             </a>
@@ -56,7 +64,6 @@
             <a
               href="#"
               class="nav__link"
-              data-qa="nav-hover"
             >
               LAPTOPS &amp; COMPUTERS
             </a>
