@@ -1,11 +1,28 @@
-$title-color: #060b35;
+// Colors
 $nav-default: #060b35;
+$title-color: #060b35;
 $text-color: #616070;
 $button-color: #00acdc;
 $brand: #00acdc;
-$white: #fff;
-$accent: #00acdc;
 $card-title-hover: #34568b;
+$white: #fff;
+
+// Sizes
+$card-width: 200px;
+$gap-x: 46px;
+$gap-y: 48px;
+$star-size: 16px;
+$stars-gap: 4px;
+$container-px: 40px;
+$container-py: 50px;
+
+// Breakpoints
+$bp-2: 488px;
+$bp-3: 768px;
+$bp-4: 1024px;
+
+// Transitions
+$transition-fast: 300ms;
 $border-radius-standard: 5px;
 $font-width-regular: 400;
 $font-width-medium: 500;
@@ -16,14 +33,4 @@ $font-size-m: 14px;
 $font-size-l: 16px;
 $line-hight-s: 14px;
 $line-hight-m: 18px;
-$card-width: 200px;
-$gap-x: 46px;
-$gap-y: 48px;
-$star-size: 16px;
-$stars-gap: 4px;
-$container-px: 40px;
-$container-py: 50px;
-$bp-2: 488px;
-$bp-3: 768px;
-$bp-4: 1024px;
-$transition-fast: 300ms;
+$accent: #00acdc;
